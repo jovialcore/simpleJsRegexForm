@@ -60,7 +60,7 @@ input.border-danger.form-control + p {
    <div class="form-group">
     <label for="date">Date of birth:</label>
     <input type="date" class="form-control" id="pwd" name="date" placeholder="dd-mm-YYYY">
-    <span>*A valid date of birth with dd-mm-yyyy format... Though the possibility of you matching this is thin because browsers have their default date format.. but don't worry just type!</span>
+    <span class="text-warning">*A valid date of birth with dd-mm-yyyy format... Though the possibility of you matching this is thin because browsers have their default date format.. but don't worry just type!</span>
   </div>
    <div class="form-group">
     <label for="url">Website:</label>
@@ -88,7 +88,7 @@ const inp_field = {
   email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/,
   date: /^(0[1-9]|1\d|2\d|3[01])\.(0[1-9]|1[0-2])\.(19|20)\d{2}$/,
   url:/^(http[s]?:\/\/(www\.)?|ftp:\/\/(www\.)?|www\.){1}([0-9A-Za-z-\.@:%_\+~#=]+)+((\.[a-zA-Z]{2,3})+)(\/(.)*)?(\?(.)*)?/,
-  address:/^\D+\d+\w+\s[A-z]+\s[A-z]+/
+  address:/^[^0-9]\D\s\w,\s(\b\w*\b\s){1,2}\w*/
 }
 
 //spaces are not allowed in range
